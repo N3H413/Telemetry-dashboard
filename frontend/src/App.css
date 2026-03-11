@@ -1,0 +1,146 @@
+/* Core Styling from previous step, with updates */
+body {
+  margin: 0;
+  background-color: #050505; /* Pitch black background */
+  color: white;
+  font-family: 'Courier New', Courier, monospace; /* For that technical/telemetry feel */
+  overflow: hidden; /* Prevents scrollbars on the main dashboard */
+}
+ 
+/* New: Dashboard Container for Header and Layout */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+ 
+/* New: The TOP Control Header Bar */
+.header-bar {
+  background-color: #111; /* Dark grey header */
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 15px;
+  border-bottom: 2px solid #222;
+}
+ 
+/* New: Button Styling */
+.control-btn {
+  background-color: #333; /* Default dark grey button */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+}
+ 
+.control-btn:hover {
+  background-color: #444;
+}
+ 
+/* Match the RED Play/Pause button and GREEN Stop/Crosshair button from the image */
+.play-pause-btn {
+  background-color: #ff3333; /* Brighter red button as requested */
+}
+.play-pause-btn:hover {
+  background-color: #ff5555;
+}
+ 
+.stop-btn {
+  background-color: white; /* White square Stop button from image */
+  color: black;
+}
+.stop-btn:hover {
+  background-color: #ddd;
+}
+ 
+.crosshair-btn {
+  background-color: #222;
+  color: white;
+}
+ 
+/* Match the Stopwatch Readout style from image (Clock icon, text "05:56:90") */
+.stopwatch-readout {
+  margin-left: auto; /* Push timer to the right side */
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Courier New', Courier, monospace; /* Match technical font */
+}
+ 
+/* Updated Layout to accommodate the header */
+.dashboard-layout {
+  flex: 1; /* Fills remaining height */
+  display: flex;
+}
+ 
+.left-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 2px solid #222;
+  overflow-y: auto; /* Allow scrolling within left panel if plot is big */
+}
+ 
+.gauges-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+ 
+.gauge-wrapper {
+  flex: 1;
+  text-align: center;
+}
+ 
+.gauge-wrapper h3 {
+  margin-top: -10px;
+  font-size: 1rem;
+}
+ 
+/* Raw Data display with large, bold text from original original prompt image */
+.raw-data {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+  padding-right: 40px;
+}
+ 
+.raw-data p {
+  margin: 5px 0;
+}
+ 
+/* New: Style for the Yellow text labels on the 3D car */
+.car-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+ 
+/* New: 2D Path Plot Container at the bottom-left */
+.path-plot-container {
+  flex: 1; /* Fills remaining space in the left panel */
+  background-color: #111;
+  border: 1px solid #333;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 8px;
+  max-height: 250px; /* Limits the height of the plot */
+}
+ 
+.right-panel {
+  flex: 2;
+  position: relative;
+  background-color: #000;
+}
