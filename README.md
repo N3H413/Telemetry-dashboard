@@ -21,13 +21,14 @@ python -m venv venv
 # Activate venv (Windows: venv\Scripts\activate | Mac/Linux: source venv/bin/activate)
 pip install -r requirements.txt
 python server.py
-
+```
 
 **Terminal 2 (Frontend)**
 ```bash
 cd frontend
 nmp install
 npm run dev
+```
 
 Open the browser to http://localhost:5173 to view the dashboard
 
