@@ -24,6 +24,7 @@ python server.py
 
 
 **Terminal 2 (Frontend)**
+```bash
 cd frontend
 nmp install
 npm run dev
