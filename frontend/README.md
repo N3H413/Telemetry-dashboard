@@ -1,9 +1,10 @@
-```markdown
+
 # Telemetry Dashboard - Frontend
 
 This is the user interface for the telemetry system, built with React and Vite. It listens to a websocket stream and updates visuals at 60 FPS.
 
 ## Tech Stack
+
 * **Framework:** React + Vite
 * **3D Rendering:** Three.js & React Three Fiber / Drei
 * **Charting:** Chart.js & react-chartjs-2
